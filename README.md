@@ -22,9 +22,20 @@ Criar um device no android studio para que possamos realizar os testes. O device
 
 ### Driver utilizado
 <a href="http://appium.io/docs/en/drivers/android-uiautomator2/index.html"> UiAutomator2 Driver</a>
+UiAutomatorviewer não consegue localizar a tela quando aberto pelo appium, ocasionando unm erro.
 
 ### Políticas de segurança
 Caso utilize o PowerShell, você não vai conseguir executar o Appium sem alterar a política de segurança. Como a política de segurança vem instalada com Default, que é restritiva e só executa scripts que são confiáveis, e como o appium não é um script confiável, precisamos mudar a política para Bypass, fazendo que o PowerShell execute apenas o que você pedir.
 ```hash
 Set-ExecutionPolicy Bypass
 ```
+
+### Características positivas
+O appiumServer tem um debug, facilitando o entendimento de possíveis erros ou entender o que eles está fazendo.
+
+
+### Principais comandos
+* Click - Utilizado para fazer ação de click. 
+* SendKeys -  Utilizado para informar os dados em um determinado campo.
+* Assert - Utilizado para realizar validações.
+* getText - Utilizado para buscar o texto do elemento.
