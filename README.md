@@ -30,9 +30,13 @@ Caso utilize o PowerShell, você não vai conseguir executar o Appium sem altera
 Set-ExecutionPolicy Bypass
 ```
 
-### Características positivas
-O appiumServer tem um debug, facilitando o entendimento de possíveis erros ou entender o que eles está fazendo.
+### Padrão de projeto Singleton
+Um dos problemas que podemos ter, é abrir várias sessões no servidor, causando erros inesperados. Uma solução é utilizar o padrão
+de projeto Singleton, para que possamos ter uma única sessão aberta.
 
+### Características positivas
+* O appiumServer tem um debug, facilitando o entendimento de possíveis erros ou entender o que eles está fazendo.
+* Facilidade em interagir com todos os elementos em tela.
 
 ### Principais comandos
 * Click - Utilizado para fazer ação de click. 
