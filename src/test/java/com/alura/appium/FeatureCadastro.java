@@ -1,5 +1,6 @@
 package com.alura.appium;
 
+import com.alura.appium.PageObjects.CadastroPageObjects;
 import io.appium.java_client.AppiumDriver;
 import junit.framework.Assert;
 import junit.framework.TestCase;
@@ -17,18 +18,11 @@ public class FeatureCadastro
 
         WebElement botaoCadastro = driver.findElement(By.id("br.com.alura.aluraesporte:id/login_botao_cadastrar_usuario"));
         botaoCadastro.click();
-        WebElement campoNome = driver.findElement(By.id("br.com.alura.aluraesporte:id/input_nome"));
-        WebElement campoSenha = driver.findElement(By.id("br.com.alura.aluraesporte:id/input_senha"));
-        WebElement campoConfirmarSenha = driver.findElement(By.id("br.com.alura.aluraesporte:id/input_confirmar_senha"));
-        campoNome.sendKeys("Diego");
-        campoSenha.sendKeys("123");
-        campoConfirmarSenha.sendKeys("321");
 
-        WebElement botaoConfirmarCadastro = driver.findElement(By.id("br.com.alura.aluraesporte:id/cadastro_usuario_botao_cadastrar"));
-        botaoConfirmarCadastro.click();
-        WebElement erroCadastro = driver.findElement(By.id("br.com.alura.aluraesporte:id/erro_cadastro"));
-
-        Assert.assertEquals("Senhas não conferem", erroCadastro.getText());
+        CadastroPageObjects telaCadastro = new CadastroPageObjects(driver);
+        telaCadastro.BuscarElementos();
+        telaCadastro.Cadastrar("Diego", "123", "321");
+        Assert.assertEquals("Senhas não conferem", telaCadastro.MensagemErro());
         driver.navigate().back();
     }
 
@@ -38,15 +32,9 @@ public class FeatureCadastro
         WebElement botaoCadastro = driver.findElement(By.id("br.com.alura.aluraesporte:id/login_botao_cadastrar_usuario"));
         botaoCadastro.click();
 
-        WebElement campoNome = driver.findElement(By.id("br.com.alura.aluraesporte:id/input_nome"));
-        WebElement campoSenha = driver.findElement(By.id("br.com.alura.aluraesporte:id/input_senha"));
-        WebElement campoConfirmarSenha = driver.findElement(By.id("br.com.alura.aluraesporte:id/input_confirmar_senha"));
-        campoNome.sendKeys("Diego");
-        campoSenha.sendKeys("123");
-        campoConfirmarSenha.sendKeys("123");
-
-        WebElement botaoConfirmarCadastro = driver.findElement(By.id("br.com.alura.aluraesporte:id/cadastro_usuario_botao_cadastrar"));
-        botaoConfirmarCadastro.click();
+        CadastroPageObjects telaCadastro = new CadastroPageObjects(driver);
+        telaCadastro.BuscarElementos();
+        telaCadastro.Cadastrar("Diego", "123", "123");
 
         WebElement botaoLogar = driver.findElement(By.id("br.com.alura.aluraesporte:id/login_botao_logar"));
 
