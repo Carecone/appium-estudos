@@ -21,7 +21,9 @@ Após tudo configurado, podemos rodar nosso servidor do appium (Foi instalado o 
 Criar um device no android studio para que possamos realizar os testes. O device não tem segredo, vai da necessidade ou do desempenho da sua máquina. 
 
 ### Driver utilizado
-<a href="http://appium.io/docs/en/drivers/android-uiautomator2/index.html"> UiAutomator2 Driver</a>
+<a href="http://appium.io/docs/en/drivers/android-uiautomator2/index.html"> UiAutomator2 Driver</a> é utilizado como um suporte para os nossos testes, possibilitando
+localizar os elemementos em tela utilizando "screenshots"<br>
+Possíveis problemas:<br>
 UiAutomatorviewer não consegue localizar a tela quando aberto pelo appium, ocasionando unm erro.
 
 ### Políticas de segurança
