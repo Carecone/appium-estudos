@@ -20,7 +20,7 @@ public class FeatureCadastro
         telaLogin.BuscarElementos();
         CadastroPageObjects telaCadastro = telaLogin.IrParaTelaDeCadastro();
         telaCadastro.BuscarElementos();
-        telaCadastro.Cadastrar("Diego", "123", "321");
+        telaCadastro.Cadastrar("Diego", "1234", "4321");
         Assert.assertEquals("Senhas não conferem", telaCadastro.MensagemErro());
         driver.navigate().back();
     }

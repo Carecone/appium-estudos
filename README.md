@@ -6,7 +6,7 @@ npm install -g appium
 
 ### Configuração 
 Antes de inciar um projeto, é preciso configurar as dependências que o appium tem(emulador do Android, sdk do Android, adb etc...), para isso o appium disponibiliza um script para verificar as dependências que estão faltando. </br>
-Você pode executar o script sem instalar na sua máquina, utilizando o script abaixo:
+Você pode executar o script sem instalar na sua máquina, utilizando o script abaixo: 
 ```hash
 npx appium-doctor
 ```
